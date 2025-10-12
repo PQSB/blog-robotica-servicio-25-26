@@ -8,6 +8,7 @@
 The goal is to program BSA algorithm for a localized vaccum cleaner so that it cleans as much of the map as possible.
 
 ### 0. Map Obstacle Dilatation:
+Once the array map is obtained, and before performing any other operations, the obstacles are dilated using OpenCV's dilate function with a *(9,9) kernel* and *2 iterations* (values determined after extensive testing) in order to ensure safer navigation.
 
 ### 1. Map Registration:
 The objective of this phase is to optain an ecuation that allows coordiates transformation from:
@@ -16,7 +17,7 @@ The objective of this phase is to optain an ecuation that allows coordiates tran
 - pixel map &rArr; gazebo
 
 To calculate the *gazebo &rArr; pixel map* transformation:
-- Get 11 coordinates from gazebo and their corresponding coordinates in in the pixel map.
+- Get 11 coordinates from gazebo and their corresponding coordinates in the pixel map.
 
 - For every gazebo point and its corresponding pixel point create the equations with these points and add them to A and B matrices.
 
@@ -46,6 +47,7 @@ While developing the algorithm I found some difficulties:
 - Making the obstacles big enough so that the robot avoids them the best way possible, but without losing too much ground to clear.
 
 ## Execution video:
+
 
 
 
