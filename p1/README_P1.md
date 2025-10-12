@@ -18,13 +18,13 @@ The objective of this phase is to optain an ecuation that allows coordiates tran
 To calculate the *gazebo &rArr; pixel map* transformation:
 - Get 11 coordinates from gazebo and their corresponding coordinates in in the pixel map.
 
-- For every gazebo point and it's belonging pixel point crate the equations with these points and add them to A and B matrixs.
+- For every gazebo point and its corresponding pixel point create the equations with these points and add them to A and B matrices.
 
 - Use **np.linalg.lstsq(A,B)** to solve this system using the least squares method and get best transformation that approximates all those points as closely as possible.
 
 To calculate the *pixel map &rArr; gazebo* transformation assemble the resulting parameters into a matrix and invert it using **np.linalg.inv(t)**.
 
-At the end of the phase, the parameters that solve the equations in both directions have been calculated so that the following ecuations can be solve in any way (gazebo &rArr; pixel map result coordinates must be rounded).
+At the end of the phase, he transformation parameters for both directions (gazebo &rArr; pixel map and pixel map &rArr; gazebo) are available, and can be used with the following equations (note: *gazebo &rArr; pixel map* pixel coordinates must be rounded):
 
 - x' = a·x + b·y + e
 
@@ -46,6 +46,7 @@ While developing the algorithm I found some difficulties:
 - Making the obstacles big enough so that the robot avoids them the best way possible, but without losing too much ground to clear.
 
 ## Execution video:
+
 
 
 
