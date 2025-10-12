@@ -116,6 +116,7 @@ While developing the algorithm I found some difficulties:
 - Choose appropriate error thresholds for navigation so that the robot does not oscillate or collide with walls. I performed several tests to determine the best values.
 
 ## Execution video:
+- **Without acceleration:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/ETUS3O-6cHFGl4hUjtalbdcBhsxfQO8K_wpd5lABL-cIEA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=DQUyac
 
 
 
