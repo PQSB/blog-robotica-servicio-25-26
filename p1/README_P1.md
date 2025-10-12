@@ -48,13 +48,21 @@ For each cell:
 
 ### 3. BSA Coverage Algorithm Route Planning
 Colour scheme chosen:
-- **DIRTY (yellow):** grid cells pending to be visited
+- **WHITE (white):** free grid cells that has not been involved in the planification yet
+
+- **DIRTY (yellow):** grid cells explored 
 
 - **CRITICAL (red):** DIRTY grid cells which are critical points (no DIRTY neighbors available)
 
 - **RETURN (blue):** DIRTY grid cells which in addition are return points.
 
+The procedure followed consits in, starting from the original location of the robot, move to the following *WHITE* grid cell (neighbor) in accordance with priority criteria:
+1. North neighbor
+2. East neighbor
+3. South neighbor
+4. West neighbor
 
+In case it every nei
 
 
 ### 4. Route Reactive Piloting
@@ -71,6 +79,7 @@ While developing the algorithm I found some difficulties:
 - Making the obstacles big enough so that the robot avoids them the best way possible, but without losing too much ground to clear.
 
 ## Execution video:
+
 
 
 
