@@ -99,6 +99,11 @@ During navigation:
 ### Obtained results:
 The vacuum cleaner manages to clean a large area of the environment, successfully avoiding obstacles.
 
+<figure>
+  <img src="BSA_planification.png" alt="Planification image" width="400"/>
+  <figcaption><em> BSA planification image</em></figcaption>
+</figure>
+
 ## Difficulties:
 
 While developing the algorithm I found some difficulties:
@@ -111,6 +116,7 @@ While developing the algorithm I found some difficulties:
 - Choose appropriate error thresholds for navigation so that the robot does not oscillate or collide with walls. I performed several tests to determine the best values.
 
 ## Execution video:
+
 
 
 
