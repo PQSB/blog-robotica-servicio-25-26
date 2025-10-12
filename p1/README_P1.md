@@ -97,7 +97,7 @@ During navigation:
 - If the orientation error exceeds the threshold, the robot stops moving forward and focuses only on correcting orientation before moving forward again in order to avoid collisions.
 
 ### Obtained results:
-The vacuum cleaner manages to clean a large area of the environment, successfully avoiding obstacles.
+The vacuum cleaner manages to clean a large area of the environment, successfully avoiding obstacles even though I have prioritised safety over obstacles rather than maximising the area cleaned.
 
 <figure>
   <img src="BSA_planification.png" alt="Planification image" width="400"/>
@@ -116,6 +116,7 @@ While developing the algorithm I found some difficulties:
 - Choose appropriate error thresholds for navigation so that the robot does not oscillate or collide with walls. I performed several tests to determine the best values.
 
 ## Execution video:
+
 
 
 
