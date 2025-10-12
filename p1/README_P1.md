@@ -61,14 +61,22 @@ Colour scheme chosen:
 
 - **RETURN (blue):** DIRTY grid cells which in addition are return points.
 
-The robot starts from its current position and attempts to explore neighboring WHITE cells using the following priority order:
-1. North neighbor
-2. East neighbor
-3. South neighbor
-4. West neighbor
+The process begins at the robot’s initial location and continues until there are no WHITE cells left in the grid. It consists of the following steps:
 
-When a direction is chosen, the other WHITE neighbors are added to return_points, making them potential candidates for backtracking in case a dead-end (critical point) is reached.
+- The robot current position is marked as DIRTY and attempts to explore neighboring WHITE cells using the following priority order:
+  1. North neighbor
+  2. East neighbor
+  3. South neighbor
+  4. West neighbor
 
+- When a direction is chosen, the other WHITE (only free) neighbors are added to **return_points**, making them potential candidates for backtracking in case a dead-end (critical point) is reached.
+
+- When a critical point is found:
+  1. the grid cell si marked as CRITICAL.
+  2. **return_points** is sorted based on Manhattan distance from the current position, so that the closest return point is tried first.
+  3. a BFS (Breadth-First Search) is used to compute a path to the selected return point.
+  4. the path is added to **route**.
+  5. the return point is marked as RETURN (blue) and deleted from **return_points**.
 
 ### 4. Route Reactive Piloting
 
@@ -86,6 +94,7 @@ While developing the algorithm I found some difficulties:
 - Resizing the grid_map so that it can be displayed correctly in an appropiate resolution. I crated a function to do so using **cv2.resize** with **interpolation=cv2.INTER_NEAREST** to resize it to the same size as the original image map has.
 
 ## Execution video:
+
 
 
 
