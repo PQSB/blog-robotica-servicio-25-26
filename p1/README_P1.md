@@ -32,6 +32,12 @@ At the end of the phase, he transformation parameters for both directions (gazeb
 - y' = c·x + d·y + f
 
 ### 2. Navigation Grid Creation
+I 
+To construct the grid_map, the image (with the obstacles already dilated) is iterated in steps of GRID_SIZE, dividing it into grid cells of GRID_SIZE × GRID_SIZE (30×30 pixels in my case).
+In each iteration the following procedure is followed:
+- The pixels belonging to the current cell are checked to see if any correspond to an obstacle and if so, the entire cell is marked as an obstacle in the grid_map.
+
+- The center of the grid_cell is calculated and stored in
 
 ### 3. BSA Coverage Algorithm Route Planning
 
@@ -47,6 +53,7 @@ While developing the algorithm I found some difficulties:
 - Making the obstacles big enough so that the robot avoids them the best way possible, but without losing too much ground to clear.
 
 ## Execution video:
+
 
 
 
