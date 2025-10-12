@@ -83,9 +83,10 @@ While developing the algorithm I found some difficulties:
 
 - Making the obstacles big enough so that the robot avoids them the best way possible, but without losing too much ground to clear.
 
-- Resizing the grid_map so that it can be displayed correctly in an appropiate resolution. I used **cv2.resize** with **interpolation=cv2.INTER_NEAREST** to resize it to the same size as the original image map has.
+- Resizing the grid_map so that it can be displayed correctly in an appropiate resolution. I crated a function to do so using **cv2.resize** with **interpolation=cv2.INTER_NEAREST** to resize it to the same size as the original image map has.
 
 ## Execution video:
+
 
 
 
