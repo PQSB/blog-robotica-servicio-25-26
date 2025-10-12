@@ -47,22 +47,27 @@ For each cell:
 - The pixel coordinates of the cell's center are computed and stored in the centers array.
 
 ### 3. BSA Coverage Algorithm Route Planning
+To create the navigation grid, two key structures are used:
+- **route:** stores the route in *grid_map* coordinates.
+
+- **return_points:** stores available return points, used to backtrack from critical points during the exploration.
+
 Colour scheme chosen:
-- **WHITE (white):** free grid cells that has not been involved in the planification yet
+- **WHITE (white):** free grid cells that has not been involved in the planification yet.
 
-- **DIRTY (yellow):** grid cells explored 
+- **DIRTY (yellow):** explored grid cells, considered as obstacles from now on (only available in routes to return points).
 
-- **CRITICAL (red):** DIRTY grid cells which are critical points (no DIRTY neighbors available)
+- **CRITICAL (red):** DIRTY grid cells which are critical points (no DIRTY neighbors available).
 
 - **RETURN (blue):** DIRTY grid cells which in addition are return points.
 
-The procedure followed consits in, starting from the original location of the robot, move to the following *WHITE* grid cell (neighbor) in accordance with priority criteria:
+The robot starts from its current position and attempts to explore neighboring WHITE cells using the following priority order:
 1. North neighbor
 2. East neighbor
 3. South neighbor
 4. West neighbor
 
-In case it every nei
+When a direction is chosen, the other WHITE neighbors are added to return_points, making them potential candidates for backtracking in case a dead-end (critical point) is reached.
 
 
 ### 4. Route Reactive Piloting
@@ -78,7 +83,10 @@ While developing the algorithm I found some difficulties:
 
 - Making the obstacles big enough so that the robot avoids them the best way possible, but without losing too much ground to clear.
 
+- Resizing the grid_map so that it can be displayed correctly in an appropiate resolution. I used **cv2.resize** with **interpolation=cv2.INTER_NEAREST** to resize it to the same size as the original image map has.
+
 ## Execution video:
+
 
 
 
