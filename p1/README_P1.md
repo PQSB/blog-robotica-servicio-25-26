@@ -82,10 +82,13 @@ The process begins at the robot’s initial location and continues until there a
 ### 4. Route Reactive Piloting
 
 Reactive navigation is based on a proportional controller for both linear and angular velocity.
+- The linear velocity is proportional to the Euclidean distance to the target.
+
+- The angular velocity is proportional to the orientation error, which is normalized within the range [–π, π].
 
 The navigation process continues as long as there are target points available. Once a target point is reached, it is marked as **CLEANED**, and the next target point is selected.
 
-To determine whether a point has been reached, the distance error is evaluated. If it falls below a predefined threshold, the point is considered reached — this threshold helps to avoid oscillations near the target.
+To determine whether a point has been reached, the distance error is evaluated. If it falls below a predefined threshold, the point is considered reached (this threshold helps to avoid oscillations near the target).
 
 During navigation:
 
@@ -107,6 +110,7 @@ While developing the algorithm I found some difficulties:
 - Choose appropriate error thresholds for navigation so that the robot does not oscillate or collide with walls. I performed several tests to determine the best values.
 
 ## Execution video:
+
 
 
 
