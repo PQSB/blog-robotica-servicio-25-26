@@ -101,7 +101,7 @@ The vacuum cleaner manages to clean a large area of the environment, successfull
 
 <figure>
   <img src="BSA_planification.png" alt="Planification image" width="400"/>
-  <figcaption><em> BSA planification image</em></figcaption>
+  <figcaption><em> BSA planification result image</em></figcaption>
 </figure>
 
 ## Difficulties:
@@ -116,6 +116,7 @@ While developing the algorithm I found some difficulties:
 - Choose appropriate error thresholds for navigation so that the robot does not oscillate or collide with walls. I performed several tests to determine the best values.
 
 ## Execution video:
+
 
 
 
