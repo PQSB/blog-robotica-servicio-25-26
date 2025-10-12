@@ -47,10 +47,19 @@ For each cell:
 - The pixel coordinates of the cell's center are computed and stored in the centers array.
 
 ### 3. BSA Coverage Algorithm Route Planning
+Colour scheme chosen:
+- **DIRTY (yellow):** grid cells pending to be visited
+
+- **CRITICAL (red):** DIRTY grid cells which are critical points (no DIRTY neighbors available)
+
+- **RETURN (blue):** DIRTY grid cells which in addition are return points.
+
 
 
 
 ### 4. Route Reactive Piloting
+
+For reactive piloting, a proportional controler is used.
 
 ### Obtained results:
 
@@ -62,6 +71,7 @@ While developing the algorithm I found some difficulties:
 - Making the obstacles big enough so that the robot avoids them the best way possible, but without losing too much ground to clear.
 
 ## Execution video:
+
 
 
 
