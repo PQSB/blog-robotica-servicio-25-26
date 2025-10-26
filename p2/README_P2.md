@@ -87,6 +87,9 @@ To calculate the battery life, a maximum flight time is set and the percentage o
 
 - **Accelerated version:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/EXRFo93n9qdMtWHKGoTdQQ8BG6gzosRFfqOLmLXa43Vc0w?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=9hI0Df
 
+## Note: 
+The videos used code with a slight error in the calculation of GPS coordinates. This has been corrected in the code.
+
 
 
 
