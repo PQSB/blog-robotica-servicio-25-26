@@ -44,8 +44,13 @@ The following functions are used in the order indicated for the survivor detecti
   - Return the centre array and the marked image.
 
 - **2: get_image_to_world_offset(face_center, image_shape, height, yaw, fov):** this function is used for every face detected in the centre array and returns the x and y offset of the detected face from the centre of the imagen in gazebo coordinates. It works as follows:
-  - 
+  - The metre-per-pixel scale is calculated using the previously calculated FOV. 
 
+  - The offset in pixels from the centre of the image to the detected face is calculated and converted to metres by using the m/px scale.
+
+  - The offset in metres is adjusted according to the coordinate system and the orientation of the drone.
+  
+  - Return x, y offsets in gazebo coordinates.
 
 ### Battery:
 To calculate the battery life, a maximum flight time is set and the percentage of that time that has elapsed is calculated.
@@ -67,6 +72,7 @@ To calculate the battery life, a maximum flight time is set and the percentage o
 - **Normal version:**
 
 - **Accelerated version:**
+
 
 
 
