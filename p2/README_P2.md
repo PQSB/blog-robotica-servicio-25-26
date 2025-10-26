@@ -31,7 +31,11 @@ For navigation, only position control is used via the **HAL.set_cmd_pos(x, y, z,
 
 ### Survivor detection:
 
+
+
+
 ### Battery:
+To calculate the battery life, a maximum flight time is set and the percentage of that time that has elapsed is calculated.
 
 ## Difficulties:
 
@@ -50,6 +54,7 @@ For navigation, only position control is used via the **HAL.set_cmd_pos(x, y, z,
 - **Normal version:**
 
 - **Accelerated version:**
+
 
 
 
