@@ -52,7 +52,7 @@ The following functions are used in the order indicated for the survivor detecti
   
   - Return x, y offsets in gazebo coordinates.
 
-- **3: is_new_survivor(current_position, detected_list, threshold):** this function returns if the provided coordinates are already stored in the suvivors array by comparing the distance between the current location and the sored locations with a threshold. Only if the distance is grater than the threshold the surivor will be added to the list.
+- **3: is_new_survivor(current_position, detected_list, threshold):** this function returns if the provided coordinates are already stored in the suvivors array by comparing the distance between the current location and the stored locations with a threshold. Only if the distance is greater than the threshold the surivor will be added to the list.
 
 - **4: get_gps_from_drone(drone_loc):** this function returns the provided gazebo coordinates in GPS coordinates.
 
@@ -76,6 +76,7 @@ To calculate the battery life, a maximum flight time is set and the percentage o
 - **Normal version:**
 
 - **Accelerated version:**
+
 
 
 
