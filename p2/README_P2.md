@@ -12,7 +12,7 @@ Program a drone to assist in a search and rescue mission on the high seas.
 
   - **NAVIGATING_TO_ZONE:** Cheks all the time if the drone has arrived to the searching zone. When the drone arrives, navigation is configured and the next state begins.
   
-  - **SEARCHING_SURVIVORS:** The drone follows the pre-planned route, attempting to detect people using the OpenCV Haar cascade detector *haarcascade_frontalface_default.xml*. To improve accuracy (since this detector requires the face to have very little orientation), all possible image rotations are tested in **20-degree** increments. Once the route has been completed or the drone's battery level is below **22%**, navigation is configured and the next state begins.
+  - **SEARCHING_SURVIVORS:** The drone follows the pre-planned route, attempting to detect people using the OpenCV Haar cascade detector *haarcascade_frontalface_default.xml*. To improve accuracy (since this detector requires the face to have very little orientation), all possible image rotations are tested in **20-degree** increments. When a new survior is found his the drone stores his coordinates. Once the route has been completed or the drone's battery level is below **22%**, navigation is configured and the next state begins.
   
   - **NAVIGATING_TO_BASE:** Cheks all the time if the drone has arrived to the base. When the drone arrives the next state begins.
   
@@ -43,6 +43,7 @@ Program a drone to assist in a search and rescue mission on the high seas.
 - **Normal version:**
 
 - **Accelerated version:**
+
 
 
 
