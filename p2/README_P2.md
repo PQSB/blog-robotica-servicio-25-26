@@ -73,9 +73,9 @@ To calculate the battery life, a maximum flight time is set and the percentage o
 
   While developing the algorithm I found some difficulties:
   
-  - 
+  - Trying to calculate the FOV correctly.
   
-  - 
+  - Undo the rotation applied to the image to obtain the central pixels of the faces correctly.
   
   - 
 
@@ -86,6 +86,7 @@ To calculate the battery life, a maximum flight time is set and the percentage o
 - **Normal version:**
 
 - **Accelerated version:**
+
 
 
 
