@@ -8,11 +8,11 @@
 Program a drone to assist in a search and rescue mission on the high seas.
 
 ### Key states:
-  - **TAKE_OFF:** Take off the drone and plan the route to follow to search for survivors. If planning has been possible, configure the navigation parameters and move on to the next stage. On the other hand, if it has not been possible to plan the route, move directly to **LANDING** so as not to navigate without a route.
+  - **TAKE_OFF:** Take off the drone and plan the route to follow to search for survivors. If planning has been possible, navigation is configured and the next stage begins. On the other hand, if it has not been possible to plan the route, move directly to **LANDING** so as not to navigate without a route.
 
-  - **NAVIGATING_TO_ZONE:** Cheks all the time if the drone has arrived to the searching zone. When the drone arrives, configure navigation parameters and move on to the next stage.
+  - **NAVIGATING_TO_ZONE:** Cheks all the time if the drone has arrived to the searching zone. When the drone arrives, navigation is configured and the next stage begins.
   
-  - **SEARCHING_SURVIVORS:** The drone follows the pre-planned route, attempting to detect people using the OpenCV Haar cascade detector *haarcascade_frontalface_default.xml*. To improve accuracy (since this detector requires the face to have very little orientation), all possible image rotations are tested in **20-degree** increments. Once the route is completed or the battery level of the drone is lower than **22%** the drone configures navigation parameters and move on to the next stage.
+  - **SEARCHING_SURVIVORS:** The drone follows the pre-planned route, attempting to detect people using the OpenCV Haar cascade detector *haarcascade_frontalface_default.xml*. To improve accuracy (since this detector requires the face to have very little orientation), all possible image rotations are tested in **20-degree** increments. Once the route has been completed or the drone's battery level is below **22%**, navigation is configured and the next stage begins.
   
   - **NAVIGATING_TO_BASE:**
   
@@ -43,6 +43,7 @@ Program a drone to assist in a search and rescue mission on the high seas.
 - **Normal version:**
 
 - **Accelerated version:**
+
 
 
 
