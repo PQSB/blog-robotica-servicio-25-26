@@ -22,6 +22,12 @@ Program a drone to assist in a search and rescue mission on the high seas.
 The planning is done with **create_searching_route(origin_location, step_x, step_y, side_length)**. This function generates a zigzag or serpentine pattern within a square area of size **side_length** centred on **origin_location**. Parameters **step_x** and **step_y** determine the number of intermediate points between displacements.
 
 ### Navigation:
+For navigation, only position control is used via the **HAL.set_cmd_pos(x, y, z, az)** function. The most relevant functions used for navigation are the following:
+- **drone_arrived(cur_loc, dst_loc, threshold):**
+
+- **calculate_orientation(dst_location):**
+
+- **move_drone_to(target, height):**
 
 ### Survivor detection:
 
@@ -44,6 +50,7 @@ The planning is done with **create_searching_route(origin_location, step_x, step
 - **Normal version:**
 
 - **Accelerated version:**
+
 
 
 
