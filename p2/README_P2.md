@@ -8,7 +8,7 @@
 Program a drone to assist in a search and rescue mission on the high seas.
 
 ### Key states:
-  - **TAKE_OFF:** Take off the drone and plan the route to follow to search for survivors. If planning has been possible, configure the navigation parameters and move on to the next stage. In case planification wasn't possible, move on to **LANDING** state.
+  - **TAKE_OFF:** Take off the drone and plan the route to follow to search for survivors. If planning has been possible, configure the navigation parameters and move on to the next stage. On the other hand, if it has not been possible to plan the route, move directly to **LANDING** so as not to navigate without a route.
 
   - **NAVIGATING_TO_ZONE:**
   
@@ -39,4 +39,5 @@ Program a drone to assist in a search and rescue mission on the high seas.
 ## Execution video:
 
 -
+
 
