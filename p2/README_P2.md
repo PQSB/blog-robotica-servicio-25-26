@@ -31,9 +31,9 @@ For navigation, only position control is used via the **HAL.set_cmd_pos(x, y, z,
 
 ### FOV calculation:
 The FOV is calculated as follows:
-- Calculate the **meter per pixel scale** at 3.15 m high by measuring a distance in gazebo and then counting the number of pixels corresponding to that length.
+- Calculate the **meter per pixel scale** at 3.15 m high by measuring a distance in gazebo and then counting the number of pixels corresponding to that length. It was found that at a height of 3.15 metres, 0.905 metres corresponds to 102 pixels.
 
-- Knowing the total witdh of the image in pixels calculate the corresponding with in meters using the **meter per pixel scale**.
+- Knowing the total witdh of the image in pixels calculate the corresponding witdh in meters using the **meter per pixel scale**. It was found that the visible width at 3.15 m 2.84 m
 
 - FOV is calculated using the formula:
 ```math
@@ -86,6 +86,7 @@ To calculate the battery life, a maximum flight time is set and the percentage o
 - **Normal version:**
 
 - **Accelerated version:**
+
 
 
 
