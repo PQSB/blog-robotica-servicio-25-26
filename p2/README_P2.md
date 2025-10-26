@@ -19,6 +19,7 @@ Program a drone to assist in a search and rescue mission on the high seas.
   - **LANDING:** Land the drone at its current position and display the location of all survivors found in GPS coordinates.
 
 ### Planification:
+To plan the funcion **create_searching_route(origin_location, step_x, step_y, side_length)** is used. This function generates a zigzag or serpentine pattern within a square area of size **side_length** centred on **origin_location**. The parameters step_x and step_y 
 
 ### Navigation:
 
@@ -43,6 +44,7 @@ Program a drone to assist in a search and rescue mission on the high seas.
 - **Normal version:**
 
 - **Accelerated version:**
+
 
 
 
