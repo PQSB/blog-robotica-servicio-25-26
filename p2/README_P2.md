@@ -18,9 +18,11 @@ Program a drone to assist in a search and rescue mission on the high seas.
   
   - **LANDING:**
 
-### Haar Cascade:
+### Planification:
 
-### Approximating location from pixels:
+### Navigation:
+
+### Survivor detection:
 
 ### Battery:
 
@@ -39,5 +41,6 @@ Program a drone to assist in a search and rescue mission on the high seas.
 ## Execution video:
 
 -
+
 
 
