@@ -23,11 +23,11 @@ The planning is done with **create_searching_route(origin_location, step_x, step
 
 ### Navigation:
 For navigation, only position control is used via the **HAL.set_cmd_pos(x, y, z, az)** function. The most relevant functions used for navigation are the following:
-- **drone_arrived(cur_loc, dst_loc, threshold):**
+- **drone_arrived(cur_loc, dst_loc, threshold):** returns whether the drone has reached a position or not by calculating the distance and comparing it with a threshold.
 
-- **calculate_orientation(dst_location):**
+- **calculate_orientation(dst_location):** returns the target angle (in radians) aligned with the movement.
 
-- **move_drone_to(target, height):**
+- **move_drone_to(target, height):** configure the navigation parameters (target, height and orientation) and start navigation using *calculate_orientation* and *HAL.set_cmd_pos* functions.
 
 ### Survivor detection:
 
@@ -50,6 +50,7 @@ For navigation, only position control is used via the **HAL.set_cmd_pos(x, y, z,
 - **Normal version:**
 
 - **Accelerated version:**
+
 
 
 
