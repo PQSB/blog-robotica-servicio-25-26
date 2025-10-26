@@ -73,19 +73,20 @@ To calculate the battery life, a maximum flight time is set and the percentage o
 
   While developing the algorithm I found some difficulties:
   
-  - Trying to calculate the FOV correctly.
+  - Trying to calculate FOV correctly.
   
   - Undo the rotation applied to the image to obtain the central pixels of the faces correctly.
   
-  - 
+  - Managing different coordinate systems.
 
-  - 
+  - Plan a route that facilitates the search for survivors.
 
 ## Execution video:
 
 - **Normal version:**
 
 - **Accelerated version:**
+
 
 
 
