@@ -4,12 +4,11 @@
 
 **Author:** Andrés Galea Torrecilla
 
-
 ## Algorithm details:
 Program a drone to assist in a search and rescue mission on the high seas.
 
 ### Key states:
-  - **TAKE_OFF:**
+  - **TAKE_OFF:** Take off the drone and plan the route to follow to search for survivors. If planning has been possible, configure the navigation parameters and move on to the next stage. In case planification wasn't possible, move on to **LANDING** state.
 
   - **NAVIGATING_TO_ZONE:**
   
@@ -40,3 +39,4 @@ Program a drone to assist in a search and rescue mission on the high seas.
 ## Execution video:
 
 -
+
