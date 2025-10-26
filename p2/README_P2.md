@@ -5,7 +5,7 @@
 **Author:** Andrés Galea Torrecilla
 
 ## Algorithm details:
-Program a drone to assist in a search and rescue mission on the high seas.
+Program a drone to assist in a search and rescue mission on the high seas. To do so, a **FSM** is used.
 
 ### Key states:
   - **TAKE_OFF:** Take off the drone and plan the route to follow to search for survivors. If planning has been possible, navigation is configured and the next state begins. On the other hand, if it has not been possible to plan the route, move directly to **LANDING** so as not to navigate without a route.
@@ -52,6 +52,10 @@ The following functions are used in the order indicated for the survivor detecti
   
   - Return x, y offsets in gazebo coordinates.
 
+- **3: is_new_survivor(current_position, detected_list, threshold):** this function returns if the provided coordinates are already stored in the suvivors array by comparing the distance between the current location and the sored locations with a threshold. Only if the distance is grater than the threshold the surivor will be added to the list.
+
+- **4: get_gps_from_drone(drone_loc):** this function returns the provided gazebo coordinates in GPS coordinates.
+
 ### Battery:
 To calculate the battery life, a maximum flight time is set and the percentage of that time that has elapsed is calculated.
 
@@ -72,6 +76,7 @@ To calculate the battery life, a maximum flight time is set and the percentage o
 - **Normal version:**
 
 - **Accelerated version:**
+
 
 
 
