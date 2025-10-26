@@ -31,7 +31,17 @@ For navigation, only position control is used via the **HAL.set_cmd_pos(x, y, z,
 
 ### Survivor detection:
 
+The following functions are used in the order indicated for the survivor detection process.
+- **1: search_and_display_faces(img, rotation_angle):** this function returns an array with the central pixels of every detected face as well as an image with the detected faces marked. It works as follows:
+  - A blue colour filter is used to remove the sea from the image and improve the accuracy of the Haar cascade.
+  
+  - The corresponding rotation is applied (for each image, all possible rotations are tested in increments of 20 degrees).
 
+  - The Haar cascade is used to detect whether there are faces in the image. If there are, the output is used to calculate the pixels at the centre of each face.
+
+  - If any rotation has been applied, it is reversed to obtain the real pixels at the centre of each detected face.
+
+  - Return the centre array and the marked image.
 
 
 ### Battery:
@@ -54,6 +64,7 @@ To calculate the battery life, a maximum flight time is set and the percentage o
 - **Normal version:**
 
 - **Accelerated version:**
+
 
 
 
