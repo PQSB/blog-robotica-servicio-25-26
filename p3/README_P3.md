@@ -24,6 +24,8 @@ Program an autonomous car to park itself, specifically on a street where other v
 
 ### Laser Data:
 
+### Distance calculation:
+
 ### Orientation calculation:
 
 ### Navigation:
@@ -47,4 +49,5 @@ Program an autonomous car to park itself, specifically on a street where other v
 - 
 
 - 
+
 
