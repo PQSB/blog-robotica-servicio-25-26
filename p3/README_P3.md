@@ -10,7 +10,7 @@ Program an autonomous car to park itself, specifically on a street where other v
 ### Key states:
   - **ALIGN:** In this state, the car starts from its initial position and moves until it reaches the desired safety distance and orientation relative to the row of cars. To do this, a controller is used to regulate both the orientation and the safety distance.
 
-  - **SEARCH:** To search for a parking space, the vehicle moves along the street at a constant speed and, when the side laser detects a valid distance for parking, it records the distance travelled, detecting the valid distance so that if it matches the minimum space size value, it is a valid space. As the car moves, it accumulates an orientation error, so as long as it detects a row to orient itself with, it corrects the car's orientation.
+  - **SEARCH_PARKING_PLACE:** To search for a parking space, the vehicle moves along the street at a constant speed and, when the side laser detects a valid distance for parking, it records the distance travelled, detecting the valid distance so that if it matches the minimum space size value, it is a valid space. On the other hand, as the car moves, it accumulates an orientation error, so as long as it detects a row to orient itself with, it corrects the car's orientation.
   
   - **REFERENCE_SEARCH:** The first time the algorithm detects a valid lateral distance value for parking, it checks whether the rear laser of the car is detecting anything, since if so, it will already have a rear reference for parking. If, when this state is reached, there is no rear reference 
   
@@ -55,6 +55,7 @@ The way the car detects whether it has a rear reference, it is very difficult fo
 - **Aligned start with no front car:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/EaKVRsN9HhNGqlYPmDsOgoMBVdv4mXmkJ-qPxFjVuA2xpQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gyazDo
 
 - **Aligned start using front reference:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/EbFRNVOCgSlNlzgbaih1huAB9QudYa1bf8aVo3AsbTUgiA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=NFs00z
+
 
 
 
