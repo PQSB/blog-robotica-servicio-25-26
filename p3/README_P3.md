@@ -23,6 +23,7 @@ Program an autonomous car to park itself, specifically on a street where other v
   - **PARKING_STRAIGHTEN:** The car straightens up by moving forward slowly and finishing correcting its orientation. The process stops when the desired orientation is achieved or when there is a risk of colliding with the car in front.
 
 ### Laser Data:
+Different sections of information provided by the lasers are used depending on their application. The information is filtered, retaining only valid values.
 
 ### Distance calculation:
 
@@ -36,19 +37,18 @@ Program an autonomous car to park itself, specifically on a street where other v
 
   While developing the algorithm I found some difficulties:
   
-  - 
+  - Calculate the orientation relative to the wall carefully.
   
-  - 
+  - Choose the right reference point for alignment during parking manoeuvres.
   
-  - 
-
-  - 
+  - Combine information from different lasers depending on the situation
 
 ## Execution videos:
 
 - 
 
 - 
+
 
 
 
