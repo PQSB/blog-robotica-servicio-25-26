@@ -14,13 +14,13 @@ Program an autonomous car to park itself, specifically on a street where other v
   
   - **REFERENCE_SEARCH:** The first time the algorithm detects a valid lateral distance value for parking, it checks whether the rear laser of the car is detecting anything, since if so, it will already have a rear reference for parking. If, when this state is reached, there is no rear reference 
   
-  - **FRONT_ALIGN:** 
+  - **FRONT_ALIGN:** If, when starting the manoeuvre, the rear laser detects an obstacle (since once the gap has been detected, the vehicle moves forward a safe distance before starting the manoeuvre), it reverses until the obstacle is no longer detected.
   
-  - **PARKING_ENTRY:**
+  - **PARKING_ENTRY:** This step consists of entering the gap. Depending on whether the reference is in front or behind, a different entry angle is used in order to align correctly.
 
-  - **PARKING_ADJUST:**
+  - **PARKING_ADJUST:** Turn in the opposite direction to the previous step until the desired orientation is achieved or a collision with the car behind may occur.
 
-  - **PARKING_STRAIGHTEN:**
+  - **PARKING_STRAIGHTEN:** The car straightens up by moving forward slowly and finishing correcting its orientation. The process stops when the desired orientation is achieved or when there is a risk of colliding with the car in front.
 
 ### Laser Data:
 
@@ -49,6 +49,7 @@ Program an autonomous car to park itself, specifically on a street where other v
 - 
 
 - 
+
 
 
 
