@@ -26,6 +26,7 @@ Program an autonomous car to park itself, specifically on a street where other v
 Different sections of information provided by the lasers are used depending on their application. The information is filtered, retaining only valid values.
 
 ### Distance calculation:
+The distance to the line of cars is calculated in different ways. During the alignment phase, it is calculated using SVD, as this is more robust for correct alignment. However, during the gap search, the distance obtained as the median of a certain sector of the right side laser is used.
 
 ### Orientation calculation:
 
@@ -48,6 +49,7 @@ Different sections of information provided by the lasers are used depending on t
 - 
 
 - 
+
 
 
 
