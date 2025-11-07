@@ -43,7 +43,7 @@ The orientation is calculated using SVD. In the alignment phase, it is used with
 
   - I did not have time to robustly implement parking space detection by creating a virtual rectangle.
 
-## Use the car in front as a reference point:
+## NOTE: Using the car in front as a reference point:
 The way the car detects whether it has a rear reference, it is very difficult for it not to detect that it has one, as the row of cars is necessary for alignment. Therefore, in order to test that the algorithm works correctly using the front car as a reference, I have included a variable **FORCE_FRONT_REF** which, if set to **True**, will cause the front car to be used as a reference so that it can be tested more easily.
 
 ## Execution videos:
@@ -55,6 +55,7 @@ The way the car detects whether it has a rear reference, it is very difficult fo
 - **Aligned start with no front car:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/EaKVRsN9HhNGqlYPmDsOgoMBVdv4mXmkJ-qPxFjVuA2xpQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gyazDo
 
 - **Aligned start using front reference:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/EbFRNVOCgSlNlzgbaih1huAB9QudYa1bf8aVo3AsbTUgiA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=NFs00z
+
 
 
 
