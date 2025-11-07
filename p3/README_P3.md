@@ -29,10 +29,7 @@ Different sections of information provided by the lasers are used depending on t
 The distance to the line of cars is calculated in different ways. During the alignment phase, it is calculated using SVD, as this is more robust for correct alignment. However, during the gap search, the distance obtained as the median of a certain sector of the right side laser is used.
 
 ### Orientation calculation:
-
-### Navigation:
-
-### Parking place detection:
+The orientation is calculated using SVD. In the alignment phase, it is used with the lateral sensor data, and in the subsequent parking manoeuvre phases, it is used with the reference chosen to perform them.
 
 ## Difficulties:
 
@@ -49,6 +46,7 @@ The distance to the line of cars is calculated in different ways. During the ali
 - 
 
 - 
+
 
 
 
