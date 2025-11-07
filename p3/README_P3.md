@@ -41,6 +41,8 @@ The orientation is calculated using SVD. In the alignment phase, it is used with
   
   - Combine information from different lasers depending on the situation
 
+  - I did not have time to robustly implement parking space detection by creating a virtual rectangle.
+
 ## Use the car in front as a reference point:
 The way the car detects whether it has a rear reference, it is very difficult for it not to detect that it has one, as the row of cars is necessary for alignment. Therefore, in order to test that the algorithm works correctly using the front car as a reference, I have included a variable **FORCE_FRONT_REF** which, if set to **True**, will cause the front car to be used as a reference so that it can be tested more easily.
 
@@ -49,6 +51,7 @@ The way the car detects whether it has a rear reference, it is very difficult fo
 - 
 
 - 
+
 
 
 
