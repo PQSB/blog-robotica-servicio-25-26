@@ -14,7 +14,7 @@ The execution is divided into the following stages:
   - **PLANNING:** The robot's current position is obtained and it is checked whether the robot has the platform raised, in which case the destination position for that shelf is selected. Otherwise, the corresponding target shelf is selected. The route to the destination position is then calculated and the next step is taken. If the route cannot be created, the process ends.
   To plan, the **create_route** function is called, which is responsible for creating the plan. If creation fails, the processing time is increased until a maximum is reached, in which case the planning is considered a failure.
 
-  - **FOLLOW_ROUTE:** In this state, reactive control is performed by position, selecting the points on the calculated route as target points (when one is reached, the next one is selected until reaching the target). To do this, the **calculate_v** function is used, which returns the linear and angular velocities (wheel rotation in the case of Ackerman steering) calculated using the position and orientation error obtained from the difference between the position of the robot and the corresponding route waypoint.
+  - **FOLLOW_ROUTE:** In this state, reactive control is performed by position, selecting the points on the calculated route as target points (when one is reached, the next one is selected). To do this, the **calculate_v** function is used, which returns the linear and angular velocities (wheel rotation in the case of Ackerman steering) calculated using the position and orientation error obtained from the difference between the position of the robot and the corresponding route waypoint.
   
   - **PICK_SHELF:** 
   
@@ -47,6 +47,7 @@ Different sections of information provided by the lasers are used depending on t
 - **Holonomic using different geometries:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/EcUxpmUzKpZDnxaXRFpBjMIBHboN-38nUtGyEpBGpiNtUg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=TMBldg
 
 - **Ackerman using different geometries:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/ESwTzxt6guxHmWKZvV5JR_MBICKcvwqpdpUpqWxpoExcLQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ejEfhz
+
 
 
 
