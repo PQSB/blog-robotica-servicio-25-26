@@ -21,13 +21,21 @@ The execution is divided into the following stages:
   - **LEAVE_SHELF:** The platform is lowered to leave the shelf, then the shelf is added to the map by marking corners as occupied using the add_shelf function, as it must be considered an obstacle again. Finally, the next target shelf is selected and the state is returned to **PLANNING**.
 
 ### Planner:
-Different sections of information provided by the lasers are used depending on their application. The information is filtered, retaining only valid values.
+After trying out many possible planners and their configurations, it was decided to use the following configuration:
+- planner = og.BITstar(si)
+- main parameters:
+    - planner.setPruning(True) : discards parts of the graph that are no longer useful, speeding up the search.
+    - si.setStateValidityCheckingResolution(0.005) : Defines the collision detection resolution.
+- Optimization objective:
+  - opt = ob.PathLengthOptimizationObjective(si) : Define the optimisation criteria:
+
+Using this configuration, there is an improvement in the final route.
 
 ### Mask creation for state validation:
-
+A mask is created with the dimensions of the robot plus an offset for greater safety and is placed in the current position and orientation of the robot. Then it is checked whether any pixel of the mask falls on an obstacle.
 
 ### Using different geometries:
-
+Depending on the robot used and on whether the robot is carrying a shelf or not, a different geometry is used when creating the mask in order to guarantee the safety of the route.
 
 ### Holonomic vs Ackerman main differences:
 
@@ -48,6 +56,7 @@ Different sections of information provided by the lasers are used depending on t
 - **Holonomic using different geometries:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/EcUxpmUzKpZDnxaXRFpBjMIBHboN-38nUtGyEpBGpiNtUg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=TMBldg
 
 - **Ackerman using different geometries:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/ESwTzxt6guxHmWKZvV5JR_MBICKcvwqpdpUpqWxpoExcLQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ejEfhz
+
 
 
 
