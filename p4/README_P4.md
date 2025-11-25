@@ -20,7 +20,7 @@ The execution is divided into the following stages:
   
   - **LEAVE_SHELF:** The platform is lowered to leave the shelf, then the shelf is added to the map by marking corners as occupied using the add_shelf function, as it must be considered an obstacle again. Finally, the next target shelf is selected and the state is returned to **PLANNING**.
 
-### Planner:
+### Planner used:
 After trying out many possible planners and their configurations, it was decided to use the following configuration:
 - planner = og.BITstar(si)
 - main parameters:
@@ -37,7 +37,8 @@ A mask is created with the dimensions of the robot plus an offset for greater sa
 ### Using different geometries:
 Depending on the robot used and on whether the robot is carrying a shelf or not, a different geometry is used when creating the mask in order to guarantee the safety of the route.
 
-### Holonomic vs Ackerman main differences:
+### Holonomic vs Ackerman main difference:
+The main difference is the execution of the route, since in Ackerman's case, one target point is not followed after another, but rather a target point is selected at a specific distance from the robot so that it has room to manoeuvre. This is done using the **select_ref_route_point** function.
 
 ## Difficulties:
 
@@ -56,6 +57,7 @@ Depending on the robot used and on whether the robot is carrying a shelf or not,
 - **Holonomic using different geometries:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/EcUxpmUzKpZDnxaXRFpBjMIBHboN-38nUtGyEpBGpiNtUg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=TMBldg
 
 - **Ackerman using different geometries:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/ESwTzxt6guxHmWKZvV5JR_MBICKcvwqpdpUpqWxpoExcLQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ejEfhz
+
 
 
 
