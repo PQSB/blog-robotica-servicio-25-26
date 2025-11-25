@@ -44,19 +44,18 @@ The main difference is the execution of the route, since in Ackerman's case, one
 
   While developing the algorithm I found some difficulties:
   
-  - 
+  - Control navigation with the Ackerman model.
   
-  - 
+  - Find the planner and its appropriate parameters.
   
-  - 
-
-  - 
+  - Create the state validation function correctly for each robot model
 
 ## Execution videos:
 
 - **Holonomic using different geometries:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/EcUxpmUzKpZDnxaXRFpBjMIBHboN-38nUtGyEpBGpiNtUg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=TMBldg
 
 - **Ackerman using different geometries:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/ESwTzxt6guxHmWKZvV5JR_MBICKcvwqpdpUpqWxpoExcLQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ejEfhz
+
 
 
 
