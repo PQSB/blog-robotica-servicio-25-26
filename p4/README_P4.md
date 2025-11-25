@@ -12,8 +12,7 @@ To simplify planning, two arrays are saved, one with the positions of the shelve
 The execution is divided into the following stages:
 
   - **PLANNING:** The robot's current position is obtained and it is checked whether the robot has the platform raised, in which case the destination position for that shelf is selected. Otherwise, the corresponding target shelf is selected. The route to the destination position is then calculated and the next step is taken. If the route cannot be created, the process ends.
-
-To plan, the **create_route** function is called, which is responsible for creating the plan. If creation fails, the processing time is increased until a maximum is reached, in which case the planning is considered a failure.
+  To plan, the **create_route** function is called, which is responsible for creating the plan. If creation fails, the processing time is increased until a maximum is reached, in which case the planning is considered a failure.
 
   - **FOLLOW_ROUTE:** 
   
@@ -48,4 +47,5 @@ The orientation is calculated using SVD. In the alignment phase, it is used with
 - **Holonomic using different geometries:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/EcUxpmUzKpZDnxaXRFpBjMIBHboN-38nUtGyEpBGpiNtUg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=TMBldg
 
 - **Ackerman using different geometries:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/ESwTzxt6guxHmWKZvV5JR_MBICKcvwqpdpUpqWxpoExcLQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ejEfhz
+
 
