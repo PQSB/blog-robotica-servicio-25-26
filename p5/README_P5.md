@@ -13,13 +13,14 @@ Implement a navigation algorithm that allows a robot to autonomously explore a w
     
   - **MOVE:**
   
-### MAP CREATION:
+### MAP CONSTRUCTION:
 
 
-### :
+### EXPLORATION:
 
 
-### :
+### NAVIGATION:
+
 
 ## Difficulties:
 
@@ -34,6 +35,7 @@ Implement a navigation algorithm that allows a robot to autonomously explore a w
 ## Execution videos:
 
 - **Explore and map warehouse:**
+
 
 
 
