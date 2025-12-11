@@ -1,6 +1,6 @@
 # P5 - Laser Mapping
 
-**Date:** 10/12/2025
+**Date:** 11/12/2025
 
 **Author:** Andrés Galea Torrecilla
 
@@ -35,6 +35,7 @@ Implement a navigation algorithm that allows a robot to autonomously explore a w
 ## Execution videos:
 
 - **Explore and map warehouse:**
+
 
 
 
