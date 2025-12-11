@@ -48,7 +48,9 @@ For the map to update correctly, it is also necessary to add an increase in free
 - The route is created using **BFS**, which returns a path in grid coordinates.
 
 ### NAVIGATION:
-Navigation is carried out using grid coordinates, which provides greater safety during movement, since as soon as a pixel belonging to a grid cell has a value considered to be an obstacle, the entire cell is marked as an obstacle. **V** and **W** velocities are calculated using a simple controller.
+Navigation is carried out using grid coordinates, which provides greater safety during movement, since as soon as a pixel belonging to a grid cell has a value considered to be an obstacle, the entire cell is marked as an obstacle.
+
+**V** and **W** velocities are calculated using a simple controller.
 
 ## Difficulties:
 
@@ -66,6 +68,7 @@ Navigation is carried out using grid coordinates, which provides greater safety 
 odom_type = ODOM
 ```
 - **Explore and map warehouse (using HAL.getOdom):** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQBtJmmNXI9ZToJfRanBSInQAQmY0WP__keSbriHtOyfJtA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=LO3LeT
+
 
 
 
