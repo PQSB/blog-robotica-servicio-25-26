@@ -19,8 +19,15 @@ Implement a navigation algorithm that allows a robot to autonomously explore a w
   - **MOVE:** The route calculated in **PLAN** is followed, updating the map whenever the robot has travelled a distance of **0.3 m** since the map must be updated with independent measurements. Once the route is completed, it moves on to **PLAN** state.
   
 ### MAP CONSTRUCTION:
+Map construction is based in Baye's rule but using **log-odds** aproximation, which allows the robot to accumulate sensor measurements efficiently and stably. Each cell’s log-odds value is updated by adding positive increments for occupied observations and negative increments for free observations. 
+
+The probability of occupancy can be recovered from the log-odds when needed using the
 
 
+For map construction, two np arrays are used:
+  - pixel_map:
+  - prob_map:
+  
 ### EXPLORATION AND ROUTE CONSTRUCTION:
 
 
@@ -41,6 +48,7 @@ Implement a navigation algorithm that allows a robot to autonomously explore a w
 
 - **Explore and map warehouse (using get_odom):**
 - **Explore and map warehouse (using get_odom) x2:**
+
 
 
 
