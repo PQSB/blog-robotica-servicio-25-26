@@ -30,9 +30,9 @@ L_free = np.log(pfree/(1-pfree))
 - For map construction, two np arrays are used:
   - **pixel_map:** stores integer values from **0 (black/no doubt obstacle) to 255 (white/no doubt free)**. This is the map showed.
   
-  - **prob_map:** stores the log-odds value of every cell.
+  - **prob_map:** stores the log-odds value of every pixel.
 
-The probability of occupancy can be recovered from the log-odds when needed using the
+- To transform log-odds values to 0-255 pixel values, the function **calculate_pixel_color** which calculates the probability belonging to each log-odds value and then turns that probability into a 0-255 integer value.
   
 ### EXPLORATION AND ROUTE CONSTRUCTION:
 
@@ -54,6 +54,7 @@ The probability of occupancy can be recovered from the log-odds when needed usin
 
 - **Explore and map warehouse (using get_odom):**
 - **Explore and map warehouse (using get_odom) x2:**
+
 
 
 
