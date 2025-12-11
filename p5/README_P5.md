@@ -38,7 +38,7 @@ L_free = np.log(pfree/(1-pfree))
 - To convert log-odds values to 0-255 pixel values, the function **calculate_pixel_color** which calculates the probability belonging to each log-odds value and then turns that probability into a 0-255 integer value.
 
 - The map is updated using valid laser values converted into pixel coordinates. This allows an increase in occupancy or freedom to be added according to the distance measured by the laser.
-For the map to update correctly, it is also necessary to add an increase in freedom to all intermediate pixels between the robot's position and the position measured by the laser.
+For the map to update correctly, it is also necessary to add an increase in freedom to all intermediate pixels between the robot's position and the position measured by the laser. This is done using the **Bresenham** algorithm.
 
 ### EXPLORATION AND ROUTE CONSTRUCTION:
 
@@ -60,6 +60,7 @@ For the map to update correctly, it is also necessary to add an increase in free
 
 - **Explore and map warehouse (using get_odom):**
 - **Explore and map warehouse (using get_odom) x2:**
+
 
 
 
