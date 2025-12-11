@@ -39,7 +39,9 @@ Implement a navigation algorithm that allows a robot to autonomously explore a w
 
 ## Execution videos:
 
-- **Explore and map warehouse:**
+- **Explore and map warehouse (using get_odom):**
+- **Explore and map warehouse (using get_odom) x2:**
+
 
 
 
