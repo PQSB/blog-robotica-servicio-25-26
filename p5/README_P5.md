@@ -27,12 +27,15 @@ L_obs = np.log(pobs/(1-pobs))
 pfree = 0.3
 L_free = np.log(pfree/(1-pfree))
 ```
-- For map construction, two np arrays are used (both maps are updated each time):
+- There are two np arrays involved in map construction (both maps are updated each time):
   - **pixel_map:** stores integer values from **0 (black/no doubt obstacle) to 255 (white/no doubt free)**. This is the map showed.
   
   - **prob_map:** stores the log-odds value of every pixel.
 
-- To transform log-odds values to 0-255 pixel values, the function **calculate_pixel_color** which calculates the probability belonging to each log-odds value and then turns that probability into a 0-255 integer value.
+- To convert log-odds values to 0-255 pixel values, the function **calculate_pixel_color** which calculates the probability belonging to each log-odds value and then turns that probability into a 0-255 integer value.
+
+- For map construction the following procedure is followed (the function **update_maps** is called):
+  - 
 
 ### EXPLORATION AND ROUTE CONSTRUCTION:
 
@@ -54,6 +57,7 @@ L_free = np.log(pfree/(1-pfree))
 
 - **Explore and map warehouse (using get_odom):**
 - **Explore and map warehouse (using get_odom) x2:**
+
 
 
 
