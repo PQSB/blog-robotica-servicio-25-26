@@ -43,7 +43,7 @@ For the map to update correctly, it is also necessary to add an increase in free
 ### EXPLORATION AND ROUTE CONSTRUCTION:
 - The exploration is carried out by **frontier exploration**, which allows the robot to always advance to an area that will provide new information to the map, as well as determine when the map is complete. To do so,  a **grid_map** is created from pixel_map and its cells are marked as **FREE**, **OCCUPIED**, or **UNKNOWN** depending on the value of the pixels that compose it.
 
-- To choose the frontier point to follow, the criterion of the robot's closet frontier has been used.
+- To choose the frontier point to follow, the criterion of the robot's closet frontier (using Manhattan distance) has been used.
 
 - The route is created using **BFS**, which returns a path in grid coordinates.
 
@@ -64,6 +64,7 @@ Navigation is carried out using grid coordinates, which provides greater safety 
 
 - **Explore and map warehouse (using get_odom):**
 - **Explore and map warehouse (using get_odom) x2:**
+
 
 
 
