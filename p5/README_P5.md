@@ -17,7 +17,10 @@ Implement a navigation algorithm that allows a robot to autonomously explore a w
     - Using BFS, the route to the nearest **frontier** point is obtained. In case there is no route (there are no more reachable frontier points), execution ends, otherwise, the variables necessary for navigation are initialised and moves on to **MOVE** state.
     
   - **MOVE:** The route calculated in **PLAN** is followed, updating the map whenever the robot has travelled a distance of **0.3 m** since the map must be updated with independent measurements. Once the route is completed, it moves on to **PLAN** state.
-  
+
+### PROCESS LASER DATA
+The **laser_data_to_points** function is used to filter valid values and convert them into pixel coordinates, as well as to indicate whether or not the beam collided.
+
 ### MAP CONSTRUCTION:
 - Map construction is based in Baye's rule but using **log-odds** aproximation, which allows the robot to accumulate sensor measurements efficiently and stably. Each pixel's log-odds value is updated by adding positive increments for occupied observations and negative increments for free observation simplifying the updates to simple sums. To avoid excessive probabilistic inertia, increments saturate when they reach a maximum value. These increments are calculated the following way (obstacle increment is greater, since it should be easier to mark a free pixel as occupied than an occupied pixel as free):
 ```python
@@ -34,8 +37,8 @@ L_free = np.log(pfree/(1-pfree))
 
 - To convert log-odds values to 0-255 pixel values, the function **calculate_pixel_color** which calculates the probability belonging to each log-odds value and then turns that probability into a 0-255 integer value.
 
-- For map construction the following procedure is followed (the function **update_maps** is called):
-  - 
+- The map is updated using valid laser values converted into pixel coordinates. This allows an increase in occupancy or freedom to be added according to the distance measured by the laser.
+For the map to update correctly, it is also necessary to add an increase in freedom to all intermediate pixels between the robot's position and the position measured by the laser.
 
 ### EXPLORATION AND ROUTE CONSTRUCTION:
 
@@ -57,6 +60,7 @@ L_free = np.log(pfree/(1-pfree))
 
 - **Explore and map warehouse (using get_odom):**
 - **Explore and map warehouse (using get_odom) x2:**
+
 
 
 
