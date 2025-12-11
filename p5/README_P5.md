@@ -30,7 +30,7 @@ L_free = np.log(pfree/(1-pfree))
 For the map to update correctly, it is also necessary to add an increase in freedom to all intermediate pixels between the robot's position and the positions measured by the laser. This is done using the **Bresenham** algorithm.
 
 ### EXPLORATION AND ROUTE CONSTRUCTION:
-- The exploration is carried out by **frontier exploration**, which allows the robot to always advance to an area that will provide new information to the map, as well as determine when the map is complete. To do so,  a **grid_map** is created from pixel_map and its cells are marked as **FREE**, **OCCUPIED**, or **UNKNOWN** depending on the value of the pixels that compose them. As well as this, a centres array, which stores the centre in pixel coordinates of every cell of the grid_map is created to be used for navigation. 
+- The exploration is carried out by **frontier exploration**, which allows the robot to always advance to an area that will provide new information to the map, as well as determine when the map is complete. To do so,  a **grid_map** is created from pixel_map and its cells are marked as **FREE**, **OCCUPIED**, or **UNKNOWN** depending on the value of the pixels that compose them. As well as this, a centres array, which stores the centre in pixel coordinates of every cell of the grid_map, is created to be used for navigation. 
 
 - To choose the frontier point to follow, the criterion of the robot's closet frontier (using **Manhattan distance**) has been used.
 
@@ -70,6 +70,7 @@ For the map to update correctly, it is also necessary to add an increase in free
 odom_type = ODOM
 ```
 - **Explore and map warehouse (using HAL.getOdom):** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQBtJmmNXI9ZToJfRanBSInQAQmY0WP__keSbriHtOyfJtA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=LO3LeT
+
 
 
 
