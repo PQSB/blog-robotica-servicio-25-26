@@ -38,17 +38,19 @@ L_free = np.log(pfree/(1-pfree))
 - To convert log-odds values to 0-255 pixel values, the function **calculate_pixel_color** which calculates the probability belonging to each log-odds value and then turns that probability into a 0-255 integer value.
 
 - The map is updated using valid laser values converted into pixel coordinates. This allows an increase in occupancy or freedom to be added according to the distance measured by the laser.
-For the map to update correctly, it is also necessary to add an increase in freedom to all intermediate pixels between the robot's position and the position measured by the laser. This is done using the **Bresenham** algorithm.
+For the map to update correctly, it is also necessary to add an increase in freedom to all intermediate pixels between the robot's position and the positions measured by the laser. This is done using the **Bresenham** algorithm.
 
 ### EXPLORATION AND ROUTE CONSTRUCTION:
 - The exploration is carried out by **frontier exploration**, which allows the robot to always advance to an area that will provide new information to the map, as well as determine when the map is complete.
 
 - To choose the frontier point to follow, the criterion of the robot's closet frontier has been used.
 
-- The route is created using **BFS**.
+- The route is created using **BFS**, which returns a path in grid coordinates.
+
+- For frontier points identification 
 
 ### NAVIGATION:
-
+Navigation is carried out using grid coordinates, which provides greater safety during movement, since as soon as a pixel belonging to a grid cell has a value considered to be an obstacle, the entire cell is marked as an obstacle.
 
 ## Difficulties:
 
@@ -64,6 +66,7 @@ For the map to update correctly, it is also necessary to add an increase in free
 
 - **Explore and map warehouse (using get_odom):**
 - **Explore and map warehouse (using get_odom) x2:**
+
 
 
 
