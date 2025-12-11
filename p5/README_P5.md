@@ -50,16 +50,17 @@ For the map to update correctly, it is also necessary to add an increase in free
 
   While developing the algorithm I found some difficulties:
   
-  - 
+  - Finding the appropriate increments for log-odds and saturation values.
   
-  - 
+  - Create grids propperly. 
   
-  - 
+  - Find and create routes to frontiers ponints propperly.
 
 ## Execution videos:
 
 - **Explore and map warehouse (using get_odom):**
 - **Explore and map warehouse (using get_odom) x2:**
+
 
 
 
