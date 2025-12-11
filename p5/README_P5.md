@@ -21,7 +21,7 @@ Implement a navigation algorithm that allows a robot to autonomously explore a w
 ### MAP CONSTRUCTION:
 
 
-### EXPLORATION:
+### EXPLORATION AND ROUTE CONSTRUCTION:
 
 
 ### NAVIGATION:
@@ -41,6 +41,7 @@ Implement a navigation algorithm that allows a robot to autonomously explore a w
 
 - **Explore and map warehouse (using get_odom):**
 - **Explore and map warehouse (using get_odom) x2:**
+
 
 
 
