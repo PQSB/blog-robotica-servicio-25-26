@@ -7,17 +7,6 @@
 ## Algorithm details:
 Implement a navigation algorithm that allows a robot to autonomously explore a warehouse environment while generating an accurate map of the area using LIDAR sensor data.
 
-### Key states:
-  - **INIT_MAP:** Mapping begins by updating the map for the first time and moves on to **PLAN** state. This state is only executed once.
-  
-  - **PLAN:** The following procedure is followed:
-    - The current **grid_map** is overwritten with a new one that takes into account the changes made to the map.
-    - The **frontier** points of the new grid_map are obtained.
-    - The robot's position is calculated in **grid_map** coordinates.
-    - Using BFS, the route to the nearest **frontier** point is obtained. In case there is no route (there are no more reachable frontier points), execution ends, otherwise, the variables necessary for navigation are initialised and moves on to **MOVE** state.
-    
-  - **MOVE:** The route calculated in **PLAN** is followed, updating the map whenever the robot has travelled a distance of **0.3 m** since the map must be updated with independent measurements. Once the route is completed, it moves on to **PLAN** state.
-
 ### PROCESS LASER DATA
 The **laser_data_to_points** function is used to filter valid values and convert them into pixel coordinates, as well as to indicate whether or not the beam collided.
 
@@ -52,6 +41,17 @@ Navigation is carried out using grid coordinates, which provides greater safety 
 
 **V** and **W** velocities are calculated using simple controllers.
 
+### KEY STATES:
+  - **INIT_MAP:** Mapping begins by updating the map for the first time and the moving on to **PLAN** state. **INIT_MAP** state is only executed once.
+  
+  - **PLAN:** The following procedure is followed:
+    - The current **grid_map** is overwritten with a new one that takes into account the changes made to the map.
+    - The **frontier** points of the new grid_map are obtained.
+    - The robot's position is calculated in **grid_map** coordinates.
+    - Using BFS, the route to the nearest **frontier** point is obtained. In case there is no route (there are no more reachable frontier points), execution ends, otherwise, the variables necessary for navigation are initialised and moves on to **MOVE** state.
+    
+  - **MOVE:** The route calculated in **PLAN** is followed, updating the map whenever the robot has travelled a distance of **0.3 m** since the map must be updated with independent measurements. Once the route is completed, it moves on to **PLAN** state.
+
 ## Difficulties:
 
   While developing the algorithm I found some difficulties:
@@ -68,6 +68,7 @@ Navigation is carried out using grid coordinates, which provides greater safety 
 odom_type = ODOM
 ```
 - **Explore and map warehouse (using HAL.getOdom):** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQBtJmmNXI9ZToJfRanBSInQAQmY0WP__keSbriHtOyfJtA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=LO3LeT
+
 
 
 
