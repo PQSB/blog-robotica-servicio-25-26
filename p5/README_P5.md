@@ -35,7 +35,7 @@ L_free = np.log(pfree/(1-pfree))
   
   - **prob_map:** stores the log-odds value of every pixel.
 
-- To convert log-odds values to 0-255 pixel values, the function **calculate_pixel_color** which calculates the probability belonging to each log-odds value and then turns that probability into a 0-255 integer value.
+- To convert log-odds values to 0 to 255 pixel values, the function **calculate_pixel_color** which calculates the probability belonging to each log-odds value and then turns that probability into a 0-255 integer value.
 
 - The map is updated using valid laser values converted into pixel coordinates. This allows an increase in occupancy or freedom to be added according to the distance measured by the laser.
 For the map to update correctly, it is also necessary to add an increase in freedom to all intermediate pixels between the robot's position and the positions measured by the laser. This is done using the **Bresenham** algorithm.
@@ -68,6 +68,7 @@ Navigation is carried out using grid coordinates, which provides greater safety 
 odom_type = ODOM
 ```
 - **Explore and map warehouse (using HAL.getOdom):** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQBtJmmNXI9ZToJfRanBSInQAQmY0WP__keSbriHtOyfJtA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=LO3LeT
+
 
 
 
