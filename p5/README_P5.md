@@ -41,7 +41,11 @@ L_free = np.log(pfree/(1-pfree))
 For the map to update correctly, it is also necessary to add an increase in freedom to all intermediate pixels between the robot's position and the position measured by the laser. This is done using the **Bresenham** algorithm.
 
 ### EXPLORATION AND ROUTE CONSTRUCTION:
+- The exploration is carried out by **frontier exploration**, which allows the robot to always advance to an area that will provide new information to the map, as well as determine when the map is complete.
 
+- To choose the frontier point to follow, the criterion of the robot's closet frontier has been used.
+
+- The route is created using **BFS**.
 
 ### NAVIGATION:
 
@@ -60,6 +64,7 @@ For the map to update correctly, it is also necessary to add an increase in free
 
 - **Explore and map warehouse (using get_odom):**
 - **Explore and map warehouse (using get_odom) x2:**
+
 
 
 
