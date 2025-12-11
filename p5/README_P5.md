@@ -20,7 +20,14 @@ Implement a navigation algorithm that allows a robot to autonomously explore a w
   
 ### MAP CONSTRUCTION:
 Map construction is based in Baye's rule but using **log-odds** aproximation, which allows the robot to accumulate sensor measurements efficiently and stably. Each cell’s log-odds value is updated by adding positive increments for occupied observations and negative increments for free observations. 
+These increments are calculated the following way:
+```python
+pobs = 0.9
+L_obs = np.log(pobs/(1-pobs))
 
+pfree = 0.3
+L_free = np.log(pfree/(1-pfree))
+```
 The probability of occupancy can be recovered from the log-odds when needed using the
 
 
@@ -48,6 +55,7 @@ For map construction, two np arrays are used:
 
 - **Explore and map warehouse (using get_odom):**
 - **Explore and map warehouse (using get_odom) x2:**
+
 
 
 
