@@ -11,7 +11,7 @@ Implement a navigation algorithm that allows a robot to autonomously explore a w
 The **laser_data_to_points** function is used to filter valid values and convert them into pixel coordinates, as well as to indicate whether or not the beam collided.
 
 ### MAP CONSTRUCTION:
-- Map construction is based in Baye's rule but using **log-odds** aproximation, which allows the robot to accumulate sensor measurements efficiently and stably. Each pixel's log-odds value is updated by adding positive increments for occupied observations and negative increments for free observation simplifying the updates to simple sums. To avoid excessive probabilistic inertia, increments saturate when they reach a maximum value. These increments are calculated the following way (obstacle increment is greater, since it should be easier to mark a free pixel as occupied than an occupied pixel as free):
+- Map construction is based in Baye's rule but using **log-odds** aproximation, which allows the robot to accumulate sensor measurements efficiently and stably. Each pixel's log-odds value is updated by adding positive increments for occupied observations and negative increments for free observation simplifying the updates to sums. To avoid excessive probabilistic inertia, increments saturate when they reach a maximum value. These increments are calculated the following way (obstacle increment is greater, since it should be easier to mark a free pixel as occupied than an occupied pixel as free):
 ```python
 pobs = 0.9
 L_obs = np.log(pobs/(1-pobs))
@@ -68,6 +68,7 @@ Navigation is carried out using grid coordinates, which provides greater safety 
 odom_type = ODOM
 ```
 - **Explore and map warehouse (using HAL.getOdom):** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQBtJmmNXI9ZToJfRanBSInQAQmY0WP__keSbriHtOyfJtA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=LO3LeT
+
 
 
 
