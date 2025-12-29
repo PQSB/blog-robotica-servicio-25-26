@@ -26,7 +26,7 @@ For apriltag the following functions are used:
 When the robot detects an AprilTag in the image, the **calculate_robot_pose** function calculates the estimated pose of the robot. The function requires wtag, pix_corners, K, dcoefs, tag_corners
 The function requires the following parameters:
 - tag location in the world reference system.
-- pixel coordinates of the tag corners.
+- tag corners coordinates in pixel coordinates.
 - K.
 - distortion coefficients.
 - tag corners coordinates in the tag reference system. 
@@ -72,6 +72,7 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Normal version:** 
+
 
 
 
