@@ -29,11 +29,11 @@ To do this, the method is formulated as a sequence of coordinate‑frame transfo
 
 **robot2world = tag2world · camera2tag · robot2camera**
 
-- robot2camera: This matrix is fixed and depends only on how the camera is mounted on the robot. It is obtained from the sdf file.
+- ***robot2camera:*** This matrix is fixed and depends only on how the camera is mounted on the robot. It is obtained from the sdf file.
 
-- camera2tag:
+- ***camera2tag:*** 
 
-- tag2world;
+- ***tag2world:*** 
 
 ### NAVIGATION:
 For navigation, a **bump & go** exploration algorithm has been implemented using laser information and a state machine.
@@ -61,6 +61,7 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Normal version:** 
+
 
 
 
