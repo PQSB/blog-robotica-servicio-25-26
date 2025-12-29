@@ -5,12 +5,13 @@
 **Author:** Andrés Galea Torrecilla
 
 ## Algorithm details:
+The goal of this exercise is to estimate the position and orientation (pose) of a robot in a 2D space by detecting and analyzing visual markers, specifically AprilTags.
 
+### APRILTAG DETECTION:
 
-### TAG DETECTION
+### POSE ESTIMATION:
 
-
-### NAVIGATION
+### NAVIGATION:
 For navigation, a **bump & go** exploration algorithm has been implemented using laser information and a state machine.
 
 To extract the most relevant laser information for making movement decisions the laser data is divided into three key sectors:
@@ -36,4 +37,5 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Normal version:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQBtJmmNXI9ZToJfRanBSInQAQmY0WP__keSbriHtOyfJtA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=LO3LeT
+
 
