@@ -41,7 +41,7 @@ To do this, the method is formulated as a sequence of coordinate‑frame transfo
 
 - ***camera2tag:***
   
-  Calculated as the inverse of the tag2camera matrix obtained from cv2.solvePnP. It is used to move from the camera reference frame to the tag reference frame. Since the tag coordinate system used by solvePnP does not match the tag coordinate system defined in the world, an additional rotation is applied to align both frames.
+  Calculated as the inverse of the tag2camera matrix obtained from **cv2.solvePnP**. It is used to move from the camera reference frame to the tag reference frame. Since the tag coordinate system used by solvePnP does not match the tag coordinate system defined in the world, an additional rotation is applied to align both frames.
 
 - ***tag2world:***
   
@@ -73,3 +73,4 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Normal version:** 
+
