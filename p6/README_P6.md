@@ -29,22 +29,26 @@ The function requires the following parameters:
 - tag corners coordinates in pixel coordinates.
 - K.
 - distortion coefficients.
-- tag corners coordinates in the tag reference system. 
+- tag corners coordinates in the tag reference system.
 
 To do this, the method is formulated as a sequence of coordinate‑frame transformations. The goal is to get:
 
 
 **robot2world = tag2world · camera2tag · robot2camera**
 
+
+##### Main Matrices:
+
 - ***robot2camera:***
   
-  From the SDF, the camera2robot matrix is obtained. However, the inverse must be calculated to obtain robot2camera, since it is needed to move from the robot to the camera reference system. This matrix is fixed and depends only on how the camera is mounted on the robot.
+  Calculated as the inverse of the camera2robot matrix obtained from the SDF. It is used to move from the robot reference frame to the camera reference frame. This transformation is fixed and depends only on how the camera is mounted on the robot.
 
 - ***camera2tag:***
-
   
+  Calculated as the inverse of the tag2camera matrix obtained from cv2.solvePnP. It is used to move from the camera reference frame to the tag reference frame. Since the tag coordinate system used by solvePnP does not match the tag coordinate system defined in the world, an additional rotation is applied to align both frames.
 
-- ***tag2world:*** 
+- ***tag2world:***
+  Constructed from the known position and orientation of the tag in the world reference frame. It is used to move from the tag reference frame to the world reference frame and only depends on how the tag is placed in the environment.
 
 ### NAVIGATION:
 For navigation, a **bump & go** exploration algorithm has been implemented using laser information and a state machine.
@@ -72,6 +76,7 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Normal version:** 
+
 
 
 
