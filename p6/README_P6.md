@@ -7,14 +7,18 @@
 ## Algorithm details:
 The goal of this exercise is to estimate the position and orientation (pose) of a robot in a 2D space by detecting and analyzing visual markers, specifically AprilTags.
 
-### APRILTAG DETECTION:
+### APRILTAG DETECTION AND POSE ESTIMATION:
+
+
+
+#### APRILTAG DETECTION:
 
 
 
 
 
 
-### POSE ESTIMATION:
+#### POSE ESTIMATION:
 
 ### NAVIGATION:
 For navigation, a **bump & go** exploration algorithm has been implemented using laser information and a state machine.
@@ -42,4 +46,5 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Normal version:** 
+
 
