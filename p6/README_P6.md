@@ -33,11 +33,7 @@ The function requires the following parameters:
 
 To do this, the method is formulated as a sequence of coordinate‑frame transformations. The goal is to get:
 
-
 **robot2world = tag2world · camera2tag · robot2camera**
-
-
-##### Main Matrices:
 
 - ***robot2camera:***
   
@@ -48,6 +44,7 @@ To do this, the method is formulated as a sequence of coordinate‑frame transfo
   Calculated as the inverse of the tag2camera matrix obtained from cv2.solvePnP. It is used to move from the camera reference frame to the tag reference frame. Since the tag coordinate system used by solvePnP does not match the tag coordinate system defined in the world, an additional rotation is applied to align both frames.
 
 - ***tag2world:***
+  
   Constructed from the known position and orientation of the tag in the world reference frame. It is used to move from the tag reference frame to the world reference frame and only depends on how the tag is placed in the environment.
 
 ### NAVIGATION:
@@ -76,6 +73,7 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Normal version:** 
+
 
 
 
