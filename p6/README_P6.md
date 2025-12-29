@@ -23,15 +23,26 @@ For apriltag the following functions are used:
 - **filter_closest_apriltag:** returns the closes apriltag to the robot (the biggest one in the image).
 
 #### POSE ESTIMATION:
-When the robot detects an AprilTag in the image, the **calculate_robot_pose** function calculates the estimated pose of the robot.
+When the robot detects an AprilTag in the image, the **calculate_robot_pose** function calculates the estimated pose of the robot. The function requires wtag, pix_corners, K, dcoefs, tag_corners
+The function requires the following parameters:
+- tag location in the world reference system.
+- pixel coordinates of the tag corners.
+- K.
+- distortion coefficients.
+- tag corners coordinates in the tag reference system. 
+
 To do this, the method is formulated as a sequence of coordinate‑frame transformations. The goal is to get:
 
 
 **robot2world = tag2world · camera2tag · robot2camera**
 
-- ***robot2camera:*** This matrix is fixed and depends only on how the camera is mounted on the robot. It is obtained from the sdf file.
+- ***robot2camera:***
+  
+  From the SDF, the camera2robot matrix is obtained. However, the inverse must be calculated to obtain robot2camera, since it is needed to move from the robot to the camera reference system. This matrix is fixed and depends only on how the camera is mounted on the robot.
 
-- ***camera2tag:*** 
+- ***camera2tag:***
+
+  
 
 - ***tag2world:*** 
 
@@ -61,6 +72,7 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Normal version:** 
+
 
 
 
