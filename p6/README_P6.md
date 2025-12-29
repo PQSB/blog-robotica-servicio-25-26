@@ -9,6 +9,11 @@ The goal of this exercise is to estimate the position and orientation (pose) of 
 
 ### APRILTAG DETECTION:
 
+
+
+
+
+
 ### POSE ESTIMATION:
 
 ### NAVIGATION:
@@ -36,6 +41,5 @@ The state machine used consists of two main states:
   - 
 
 ## Execution video:
-- **Normal version:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQBtJmmNXI9ZToJfRanBSInQAQmY0WP__keSbriHtOyfJtA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=LO3LeT
-
+- **Normal version:** 
 
