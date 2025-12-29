@@ -73,14 +73,3 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Normal version:** 
-
-
-
-
-
-
-
-
-
-
-
