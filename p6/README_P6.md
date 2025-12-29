@@ -65,12 +65,13 @@ The state machine used consists of two main states:
 
   While developing the algorithm I found some difficulties:
   
-  - 
+  - Understand what solvePnP returns and how to work with it.
   
-  -  
+  - Understand and correctly manage the chain of transformations (robot→camera→tag→world).
   
-  - 
+  - Interpreting the different reference systems and how they are combined using matrix multiplications to obtain the final pose estimate.
 
 ## Execution video:
 - **Normal version:** 
+
 
