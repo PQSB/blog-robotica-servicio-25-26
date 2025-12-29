@@ -9,10 +9,20 @@
 
 ### TAG DETECTION
 
+
 ### NAVIGATION
+For navigation, a **bump & go** exploration algorithm has been implemented using laser information and a state machine.
 
+To extract the most relevant laser information for making movement decisions the laser data is divided into three key sectors:
 
+- **Front sector:** to detect obstacles in the direction of travel.
+- **Right sector and Left sector:** to decide which way to turn when an obstacle is detected.
 
+The state machine used consists of two main states:
+
+  - **FORWARD:** The robot moves in a straight line as long as the front sector is clear. When an obstacle is detected it moves to **TURN** state.
+
+  - **TURN:** When the laser detects an obstacle in front, the robot stops moving forward and turns for a random amount of time (between 0.5 s and 1.2 s). The direction of the turn is decided by comparing the lateral distances, so that the robot tends to turn toward the clearer side. Once the turn is complete, it returns to the **FORWARD** state.
 
 ## Difficulties:
 
@@ -26,3 +36,4 @@
 
 ## Execution video:
 - **Normal version:** https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQBtJmmNXI9ZToJfRanBSInQAQmY0WP__keSbriHtOyfJtA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=LO3LeT
+
