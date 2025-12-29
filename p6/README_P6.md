@@ -8,18 +8,19 @@
 The goal of this exercise is to estimate the position and orientation (pose) of a robot in a 2D space by detecting and analyzing visual markers, specifically AprilTags.
 
 ### APRILTAG DETECTION AND POSE ESTIMATION:
-To detect apriltags and estimate their position the following procedure is used:
-1) Detect the apriltags in the image.
+To detect AprilTags and estimate the robot pose the following procedure is used:
+1)  Detect all AprilTags present in the camera image.
 2)  Filter detected apriltags to keep the closest one.
-3)  Show the closest apriltag in the image.
-4)  Use **cv2.solvePnP** and RT matrices to calculate the location of the robot (x, y, yaw).
+3)  Highlight the selected tag in the image for visualization.
+4)  Use **cv2.solvePnP** together with the known 3D coordinates of the tag corners to compute the robot pose (x, y, yaw).
 
--  In case there are no apriltag in the image, the robot pose estimation is calculated adding the odom increment to the previous robot location.
--  The robot pose estimation can not begin until the robot has seen one apriltag (needs loaction initialization).
-
+-  In case there are no apriltag in the image, the robot pose estimation is updated using odometry increments.
+-  Pose estimation can only start after the robot has seen at least one tag, since an initial absolute reference is required.
 
 #### APRILTAG DETECTION:
-
+For apriltag the following functions are used:
+- **detect_apriltags:** returns all the apriltags detected in the image.
+- **filter_closest_apriltag:** returns the closes apriltag to the robot (the biggest one in the image).
 
 
 
@@ -53,6 +54,7 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Normal version:** 
+
 
 
 
