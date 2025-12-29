@@ -22,11 +22,17 @@ For apriltag the following functions are used:
 - **detect_apriltags:** returns all the apriltags detected in the image.
 - **filter_closest_apriltag:** returns the closes apriltag to the robot (the biggest one in the image).
 
-
-
-
-
 #### POSE ESTIMATION:
+When the robot detects an AprilTag in the image, the **calculate_robot_pose** function calculates the estimated pose of the robot.
+To do this, the method is formulated as a sequence of coordinate‑frame transformations. The goal is to get:
+
+
+**robot2world = tag2world · camera2tag · robot2camera**
+
+
+h of these matrices represents a known or computable relationship between coordinate systems, and together they allow recovering the absolute pose of the robot in the environment.
+
+
 
 ### NAVIGATION:
 For navigation, a **bump & go** exploration algorithm has been implemented using laser information and a state machine.
@@ -54,6 +60,7 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Normal version:** 
+
 
 
 
