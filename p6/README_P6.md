@@ -43,9 +43,9 @@ To do this, the method is formulated as a sequence of coordinate‑frame transfo
 
 - ***tag2world:***
   
-  Constructed from the known position and orientation of the AprilTag in the world reference frame. It is used to move from the AprilTag reference frame to the world reference frame and only depends on how the tag is placed in the environment.
+  Constructed from the known position and orientation of the AprilTag in the world reference frame. It is used to move from the AprilTag reference frame to the world reference frame and only depends on how the AprilTag is placed in the environment.
 
-In case no AprilTag is watched the current odometry is taken and compared with the odometry saved the last time an Apriltag was watched. The difference between the two readings represents the actual increase in the robot's movement (forward, lateral, and turning). This increase is added directly to the last known absolute position (the one that came from the last Apriltag watched) to obtain the new estimated position.
+In case no AprilTag is watched the current odometry is taken and compared with the odometry saved the last time an AprilTag was watched. The difference between the two readings represents the actual increase in the robot's movement (forward, lateral, and turning). This increase is added directly to the last known absolute position (the one that came from the last AprilTag watched) to obtain the new estimated position.
 
 ### NAVIGATION:
 For navigation, a **bump & go** exploration algorithm has been implemented using laser information and a state machine.
@@ -73,6 +73,7 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Bump&Go navigation with pose estimation:** [https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQCeripvhsHsRrG4qXp6auQ6AR_lxCkUcgFljdDu7ZvZyqg?e=AsaCqF](https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQCeripvhsHsRrG4qXp6auQ6AR_lxCkUcgFljdDu7ZvZyqg?e=fLIKPm)
+
 
 
 
