@@ -47,6 +47,8 @@ To do this, the method is formulated as a sequence of coordinate‑frame transfo
   
   Constructed from the known position and orientation of the tag in the world reference frame. It is used to move from the tag reference frame to the world reference frame and only depends on how the tag is placed in the environment.
 
+In case no Apriltag is watched the current odometry is taken and compared with the odometry saved the last time an Apriltag was watched. The difference between the two readings represents the actual increase in the robot's movement (forward, lateral, and turning). This increase is added directly to the last known absolute position (the one that came from the last Apriltag watched) to obtain the new estimated position.
+
 ### NAVIGATION:
 For navigation, a **bump & go** exploration algorithm has been implemented using laser information and a state machine.
 
@@ -73,3 +75,4 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Normal version:** 
+
