@@ -14,8 +14,8 @@ To detect AprilTags and estimate the robot pose the following procedure is used:
 3)  Highlight the selected tag in the image for visualization.
 4)  Use **cv2.solvePnP** together with the known 3D coordinates of the tag corners to compute the robot pose (x, y, yaw).
 
--  In case there are no apriltag in the image, the robot pose estimation is updated using odometry increments.
 -  Pose estimation can only start after the robot has seen at least one tag, since an initial absolute reference is required.
+-  If more than one Apriltag is detected, the closest one (the largest in the image) is selected, and only the selected Apriltag is highlighted in the displayed image.
 
 #### APRILTAG DETECTION:
 For apriltag the following functions are used:
@@ -75,5 +75,6 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Bump&Go navigation with pose estimation:** [https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQCeripvhsHsRrG4qXp6auQ6AR_lxCkUcgFljdDu7ZvZyqg?e=AsaCqF](https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQCeripvhsHsRrG4qXp6auQ6AR_lxCkUcgFljdDu7ZvZyqg?e=fLIKPm)
+
 
 
