@@ -17,9 +17,9 @@ To detect AprilTags and estimate the robot pose the following procedure is used:
 -  Pose estimation can only start after the robot has seen at least one tag, since an initial absolute reference is required.
 
 #### APRILTAG DETECTION:
-For Apriltag detection the following functions are used:
-- **detect_apriltags:** returns all the apriltags detected in the image.
-- **filter_closest_apriltag:** returns the closest apriltag to the robot (the biggest one in the image).
+For AprilTag detection the following functions are used:
+- **detect_apriltags:** returns all the AprilTags detected in the image.
+- **filter_closest_apriltag:** returns the closest AprilTag to the robot (the biggest one in the image).
 
 #### POSE ESTIMATION:
 When the robot detects an AprilTag in the image, the **calculate_robot_pose** function calculates the estimated pose of the robot. The function requires the following parameters:
@@ -73,6 +73,7 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Bump&Go navigation with pose estimation:** [https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQCeripvhsHsRrG4qXp6auQ6AR_lxCkUcgFljdDu7ZvZyqg?e=AsaCqF](https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQCeripvhsHsRrG4qXp6auQ6AR_lxCkUcgFljdDu7ZvZyqg?e=fLIKPm)
+
 
 
 
