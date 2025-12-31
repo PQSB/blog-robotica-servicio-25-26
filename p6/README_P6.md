@@ -23,8 +23,7 @@ For apriltag the following functions are used:
 - **filter_closest_apriltag:** returns the closes apriltag to the robot (the biggest one in the image).
 
 #### POSE ESTIMATION:
-When the robot detects an AprilTag in the image, the **calculate_robot_pose** function calculates the estimated pose of the robot. The function requires wtag, pix_corners, K, dcoefs, tag_corners
-The function requires the following parameters:
+When the robot detects an AprilTag in the image, the **calculate_robot_pose** function calculates the estimated pose of the robot. The function requires the following parameters:
 - tag location in the world reference system.
 - tag corners coordinates in pixel coordinates.
 - K.
@@ -75,6 +74,7 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Bump&Go navigation with pose estimation:** [https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQCeripvhsHsRrG4qXp6auQ6AR_lxCkUcgFljdDu7ZvZyqg?e=AsaCqF](https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQCeripvhsHsRrG4qXp6auQ6AR_lxCkUcgFljdDu7ZvZyqg?e=fLIKPm)
+
 
 
 
