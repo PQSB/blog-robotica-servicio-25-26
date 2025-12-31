@@ -23,11 +23,11 @@ For AprilTag detection the following functions are used:
 
 #### POSE ESTIMATION:
 When the robot detects an AprilTag in the image, the **calculate_robot_pose** function calculates the estimated pose of the robot. The function requires the following parameters:
-- tag location in the world reference system.
-- tag corners coordinates in pixel coordinates.
+- AprilTag location in the world reference system.
+- AprilTag corners coordinates in pixel coordinates.
 - K.
 - distortion coefficients.
-- tag corners coordinates in the tag reference system.
+- AprilTag corners coordinates in the tag reference system.
 
 To do this, the method is formulated as a sequence of coordinate‑frame transformations. The goal is to get:
 
@@ -73,6 +73,7 @@ The state machine used consists of two main states:
 
 ## Execution video:
 - **Bump&Go navigation with pose estimation:** [https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQCeripvhsHsRrG4qXp6auQ6AR_lxCkUcgFljdDu7ZvZyqg?e=AsaCqF](https://urjc-my.sharepoint.com/:v:/g/personal/a_galea_2022_alumnos_urjc_es/IQCeripvhsHsRrG4qXp6auQ6AR_lxCkUcgFljdDu7ZvZyqg?e=fLIKPm)
+
 
 
 
